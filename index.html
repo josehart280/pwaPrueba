@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi PWA Avanzada</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+
+    <script>
+        if(ServiceWorker in navigator){
+            navigator.serviceWorker.register('sw.js')
+        }
+    </script>
+
+
+
+
+    <meta name="theme-color" content="#667eea">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">¡Mi PWA!</h1>
+        <p class="subtitle">Una aplicación web progresiva moderna y responsive</p>
+        
+        <div class="features">
+            <div class="feature-item">
+                <div class="feature-icon"></div>
+                <span class="feature-text">Rápida y confiable</span>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon"></div>
+                <span class="feature-text">Funciona offline</span>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon"></div>
+                <span class="feature-text">Diseño responsive</span>
+            </div>
+        </div>
+        
+        <button class="cta-button" onclick="showMessage()">
+            ¡Comenzar!
+        </button>
+    </div>
+
+    <script>
+        function showMessage() {
+            alert('¡Bienvenido a tu PWA! 🚀');
+        }
+    </script>
+</body>
+</html>
